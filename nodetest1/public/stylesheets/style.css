@@ -12,6 +12,11 @@ nav{
 text-align:center;
 }
 
+p{
+	padding:0;
+	margin:0;
+}
+
 #chatWindow{
 	margin:auto;
 	width: 500px;
@@ -37,4 +42,9 @@ text-align:center;
 
 #btnChatInput{
 	width:10%;
+}
+
+#btnLeaveChat{
+	float:right;
+	border-style:none;
 }

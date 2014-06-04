@@ -1,8 +1,10 @@
-var userName;
+var username;
 
 var chat = {
 	joinChat: function(){
-		userName = $('#txtUsername').val();
+		username = $('#txtUsername').val();
+		$('#userName').text('You are now signed in as ' + username);
+		
 		$('#joinChat').hide();
 		$('#inChat').show();
 	},
@@ -11,12 +13,19 @@ var chat = {
 		$('#joinChat').show();
 		$('#inChat').hide();
 	},
-	addText: function(){
-		var txtIn = $('#txtChatInput').val();
-		
-		$('#chatArea').append('<br />' + userName + ': ' + txtIn);
-		
-		chat.scrollToBottom($('#chatArea'));
+	addText: function(e){
+		if ((e.type == 'keypress' && e.keyCode == 13) || e.type == 'click'){
+			var txtIn = $('#txtChatInput').val();
+			 $('#txtChatInput').val('');
+			
+			//Add text
+			$('#chatArea').append('<b>' + username + '</b>: ' + txtIn + '<br />');
+			
+			//Clear input
+			
+			
+			chat.scrollToBottom($('#chatArea'));
+		}		
 	},
 	scrollToBottom: function(element){
 		element.scrollTop(element[0].scrollHeight);

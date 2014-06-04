@@ -11,11 +11,12 @@ block content
 		br
 		div#inChat
 			div
-				input#txtChatInput
-				input#btnChatInput(type="button" value="Enter" onclick="chat.addText();")
+				input#txtChatInput(onkeypress="chat.addText(event);")
+				input#btnChatInput(type="button" value="Enter" onclick="chat.addText(event);")
 			div
+				span#userName
 				input#btnLeaveChat(type="button" value="Leave Chat" onclick="chat.leaveChat();")
 		div#joinChat
 			p Username: 
-			input#txtUsername
-			input#btnJoinChat(type="button" value="Join Chat" onclick="chat.joinChat();")
+				input#txtUsername
+				input#btnJoinChat(type="button" value="Join Chat" onclick="chat.joinChat();")
