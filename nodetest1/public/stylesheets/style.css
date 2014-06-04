@@ -26,6 +26,10 @@ text-align:center;
 	overflow:auto;
 }
 
+#inChat{
+	display:none;
+}
+
 #txtChatInput{
 	width:88%;
 	margin-right:1%;

@@ -9,6 +9,13 @@ block content
 	div#chatWindow
 		div#chatArea
 		br
-		div
-			input#txtChatInput
-			input#btnChatInput(type="button" value="Enter" onclick="chat.addText();")
+		div#inChat
+			div
+				input#txtChatInput
+				input#btnChatInput(type="button" value="Enter" onclick="chat.addText();")
+			div
+				input#btnLeaveChat(type="button" value="Leave Chat" onclick="chat.leaveChat();")
+		div#joinChat
+			p Username: 
+			input#txtUsername
+			input#btnJoinChat(type="button" value="Join Chat" onclick="chat.joinChat();")
