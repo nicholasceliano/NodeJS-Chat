@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h3= title
+	
+	nav
+		a(href="/") Home
+	
+	div#chatWindow
+		div#chatArea
+		br
+		div
+			input#txtChatInput
+			input#btnChatInput(type="button" value="Enter" onclick="chat.addText();")
